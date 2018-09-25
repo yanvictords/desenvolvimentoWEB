@@ -1,7 +1,8 @@
 # Aula de Desenvolvimento Web Full-Stack
 
-Curso de desenvolvimento web que engloba conhecimentos de front e back end, utilizando frameworks novos e com bom espaço no mercado de trabalho.
-
+Curso de desenvolvimento web que engloba conhecimentos de front e back end, utilizando frameworks novos e com bom espaço no mercado de trabalho. (Desenvolvido na semana universitária com victorgcramos)
+## PROJETO ORIGINAL
+https://github.com/victorgcramos/aula_desenvolvimento
 
 ## Referências básicas
 - Tutorial de HTML, CSS, Bootstrap e JavaScript: [W3Schools](https://www.w3schools.com/default.asp)
