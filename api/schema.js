@@ -30,5 +30,5 @@ const ProdutoSchema = new Schema(
 
 module.exports = {
   UserSchema: mongoose.model('User', UserSchema),
-  ProdutoSchema: mongoose.model('ProdutoYan', ProdutoSchema)
+  ProdutoSchema: mongoose.model('Produto', ProdutoSchema)
 }

@@ -8,7 +8,7 @@ const router = require('./router.js')
 const app = express()
 
 // Conecta o mongo a aplicação
-let db_url = 'mongodb://admin:admin0@ds113703.mlab.com:13703/produtoraphael'
+let db_url = 'mongodb://admin:admin0@ds113693.mlab.com:13693/lojavirtual'
 let mongoDB = db_url
 
 mongoose.connect(mongoDB)
