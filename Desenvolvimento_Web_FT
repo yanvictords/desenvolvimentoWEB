@@ -1,0 +1,105 @@
+Oficina de desenvolvimento web: FT - UnB. Data: 25/09/2018
+SLIDES: https://github.com/victorgcramos/aula_desenvolvimento
+
+=====================================
+1ª aula: Conceitos básicos e BACK-END (APIRestful : usa protocolo http)
+=====================================
+
+JSON: notação javascript para objeto
+BSON: versão binária
+
+ExpressJS: framework de Web App em NodeJS, usado para resolver queries HTTP's
+- Porta: escuta cliente;
+- Middleware: Antes do router. Roda alguma coisa no meio (exceções, por exemplo);
+- Router: pega a rota e define o código que vai ser rodado.
+
+- VScode: virtual studio: IDE leve e boa para web
+
+====== versão inicial para entender como configurar o framework
+
+Iniciando projeto: (x) terminal command
+- (1) npm init: diz que quer criar projeto em node naquela pasta
+- (2) npm install express: instala express // após: vai para dependencies no package.json ~ com npm install já resolveria
+- (3) npm install: instala as dependências
+- node_modules: modulos instalados. Tudo o que precisarmos (dependências)
+ 
+PASSO INICIAL:
+1. O arquivo index.js foi criado do zero, inserido todas as linhas de código segundo os professores;
+2. Command: node index.js -> roda o arquivo index.js
+
+====== versão github com mais códigos
+git clone https://github.com/victorgcramos/aula_desenvolvimento.git
+Diretório: [Terça: 'api'; Quinta: 'front']
+Dependências: 
+- mongoose: um framework (pode usar outros do mongoDB) para criar esquemas no mongoDB. Se alterar a biblioteca, a sintaxe pode variar (schema.js)
+- nodemon: é um facilitador. Ao salvar o projeto, ele atualiza automaticamente enquanto ativo. Sem ele, é preciso startar novamente a cada alteração.
+
+=== 'api':
+1. npm install (baixar dependências e criação da node_modules)
+2. npm run dev (aqui a sua aplicação estará rodando)
+3. Testar no browser (faz um GET) para localhost:8000 ~ deve aparecer "Welcome to our API"
+
+~~~ Descrição de arquivos: Modularização opcional em diversos arquivos para melhorar a legibilidade (Padrão de Projeto)
+~~~ No projeto deles, o arquivo server.js é equivalente ao index.js;
+~~~ Server.js declara tudo que é necessário para usar. É tipo uma main;
+~~~ Router.js define as rotas para saber qual função de Controller.js será usada. Ou seja, ela guarda endpoints;
+~~~ Controller.js define todos os métodos que serão usados;
+~~~ Schema.js declara todas os esquemas necessários para a aplicação. Sua definição cria a tabela no mongoDB. Bastar rodar.
+
+= No Código: bodyParser: pega a string da requisição e define como sendo JSON (com objetos e seus respectivos valores)
+
+===== Aula sobre MongoDB (biblioteca/banco escolhida para usar juntamente com o servidor backend)
+noSQL: consegue criar array em uma coluna; é mais fácil para adicionar uma nova coluna em uma tabela já existente; etc.
+~> entrar em 'mlab.com' para criar o banco. Criar conta.
+1: No site, Create now -> SANDBOX (free) -> amazon (fica à escolha) -> escolher local (geográfico) -> salvar -> conferir se criou.
+2: Para acessar o BD criado, precisa criar um usuário para ele para pedir permissão de acesso à este BD em específico (para que nem todo mundo consiga acessar - segurança). Verificar o resultado final no próprio site.
+3: Mongo não tem tabela, e sim Collection. Schema.js define esquemas que serão criadas em Collection (Tabela)
+4: A definição e autenticação para acessar o banco criado no mLab está em server.js
+5: por padrão, o 'mongoose' utiliza patch e não PUT method.
+6: Em schema.js, "UserSchema: mongoose.model('User', UserSchema)" : User é o nome da coleção
+
+=====================================
+2ª aula: FRONT-END
+=====================================
+<HTML>: só aparecerá na página o que estiver entre <body> </body>
+<CSS>: usado para melhorar a beleza da página. Caso esteja em arquivos diferentes (css vs html), pode chamar o CSS dentro do arquivo html. Usar <link ...> para isso
+
+= Frameworks: ReactJS e VueJS
+= Componentes: é uma (<tag>) HTML customizada que nós criamos. <nome-componente ...> <\nome-componente>
+= Reatividade: é a forma de como os componentes compartilham dados entre si
+= Diferenças:
+=== Vue:
+- mais fácil
+- html dentro de <template> e script dentro de <script>
+
+=== React: 
+- tudo está dentro do <script>
+
+=== Instalação: sudo...
+= Vue
+- npm install -g vue
+- npm install -g @vue/cli
+- vue create hello-world (obs*)
+- cd hello-world
+- npm install
+- npm run serve
+
+-> obs: Ao rodar o vue create, escolher a opção 'manually select features' e inserir router (tirar lint se quiser). Aceitar todo o resto.
+
+= React
+- npm install -g create-react-app
+- npx create-react-app hello-word
+- cd hello-world
+- npm install
+- npm run start
+
+======== Comentários
+
+==== VUE:
+- Vue axios para connsumir API
+- Promises: classe do JS para definir comportamentos assíncronos. Pode ter sucesso ou falha. Caso não queria comportamente assíncrono, usar 'async/await': quando quer que espere a requisição terminar. async () => {}
+
+===== REACT:
+- props: vem da super classe. Para acesser no filho, bastar usar "props.nome". Para mandar para o filho, dentro da tag, use nome="algo".
+- não tem async/await
+- precisa usar then().catch()
