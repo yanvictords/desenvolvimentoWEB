@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import store from './store'
 
 Vue.use(Router)
 
@@ -14,18 +13,20 @@ export default new Router({
       name: 'home',
       component: Home
     },
-    // Criação da nova rota de cadastro de usuarios
+    // rota de cadastro de usuarios
     {
       path: '/cadastro',
       name: 'Cadastro',
       component: () => import('./views/Register.vue')
     },
+    // rota de perfil
     {
       path: '/perfil',
-      beforeEnter: (to, from, next) => {
-        store.state.user ? next() : next({ path: '/' })
-      },
       component: () => import('./views/Profile.vue')
+    },
+    {
+      path: '/produtos',
+      component: () => import('./views/ListaProdutos.vue')
     },
     {
       path: '*',

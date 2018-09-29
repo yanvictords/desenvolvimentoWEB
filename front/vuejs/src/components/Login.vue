@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { loginAction } from '../actions'
 export default {
   name: 'Login',
   props: {
@@ -39,13 +39,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'login'
-    ]),
     async sendForm () {
       try {
-        await this.login(this.$data)
-        this.$router.push('/perfil')
+        await loginAction(this.$data)
+        this.$router.push('/produtos')
       } catch (error) {
         alert(error.response.data.error)
       }
@@ -56,17 +53,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 a {
   color: #42b983;
 }

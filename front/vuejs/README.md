@@ -27,7 +27,6 @@ $ npm run build
 ## Links de Referência
 
 - [Vue](https://br.vuejs.org/index.html)
-- [Vuex](https://vuex.vuejs.org/ptbr/)
 
 ## O que foi feito aqui?
 ### 1. Criação do Projeto
@@ -39,7 +38,7 @@ Vue CLI v3.0.3
   default (babel, eslint)
 ❯ Manually select features
 ```
-Selecionamos as seguintes features: Babel, Router, Vuex e Linter/Formatter
+Selecionamos as seguintes features: Babel, Router
 ```
 Vue CLI v3.0.3
 ? Please pick a preset: Manually select features
@@ -48,9 +47,9 @@ Vue CLI v3.0.3
  ◯ TypeScript
  ◯ Progressive Web App (PWA) Support
  ◉ Router
- ◉ Vuex
+ ◯ Vuex
  ◯ CSS Pre-processors
- ◉ Linter / Formatter
+ ◯ Linter / Formatter
  ◯ Unit Testing
  ◯ E2E Testing
 ```
@@ -58,7 +57,7 @@ Aqui está a configuração do nosso projeto
 ```
 Vue CLI v3.0.3
 ? Please pick a preset: Manually select features
-? Check the features needed for your project: Babel, Router, Vuex, Linter
+? Check the features needed for your project: Babel, Router
 ? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
 ? Pick a linter / formatter config: Standard
 ? Pick additional lint features: Lint on save

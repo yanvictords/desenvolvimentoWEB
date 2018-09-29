@@ -1,3 +1,60 @@
+# Aula de desenvolvimento em React
+## Setup
+Instalação do gerador de aplicações em react
+(o $ serve para mostrar que é um comando)
+```
+$ npm install -g create-react-app
+```
+
+Para rodar a aplicação e servir em uma página do seu browser
+```
+$ npm run start
+```
+
+Para construir o projeto para Produção, ou seja, versão definitiva
+```
+$ npm run build
+```
+
+## Links de Referência
+[Documentação do React](https://reactjs.org/docs/getting-started.html)
+[Roteamento](https://medium.com/collabcode/roteamento-no-react-com-os-poderes-do-react-router-v4-fbc191b9937d)
+[Tutorial Redux](https://medium.com/reactbrasil/iniciando-com-redux-c14ca7b7dcf)
+
+## O que foi feito aqui?
+### 1. Criação do Projeto
+```
+$ create-react-app reactjs
+```
+
+### 2. Instalação do Axios
+Instalamos essa ferramenta para podermos fazer requisições para a nossa API seguindo o protocolo HTTP
+```
+$ npm install axios
+```
+
+### 3. Criação da camada de comunicação com a API
+Criamos a pasta para a comunicação com a nossa API usando o Axios. Para isso, criamos uma pasta `src/api`
+com um arquivo `index.js`
+
+```javascript
+import axios from 'axios'
+
+// api - vai ser agora uma instância do Axios. Poderemos adicionar configurações especiais para ela
+// tais como uma url de base, que será a que faremos nossa comunicação com o backend
+let api = axios.create({
+  baseURL: 'http://localhost:8000',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+export default {
+  // aqui vamos inserir nossos métodos
+}
+```
+
+### 4. Modificamos os arquivos existentes e criamos nossos componentes, assim como ensinamos em sala de aula
+# Guia gerado automaticamente
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

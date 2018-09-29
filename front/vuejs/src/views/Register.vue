@@ -3,8 +3,6 @@
     <h1>
       Registro de Usuários
     </h1>
-    <!-- Uso do 'ref' para identificar o elemento -->
-    <p class="text-primary" ref="responseText">{{responseMessage}}</p>
     <!--
       -> DICA RÁPIDA:
         Divisão de colunas no bootstrap.
@@ -17,79 +15,67 @@
       <div class="form-group">
         <label>Nome: *</label>
         <input type="text" v-model="name" class="form-control">
-      </div>
-      <div class="form-group">
         <label>E-mail: *</label>
         <input type="email" v-model="email" class="form-control">
-      </div>
-      <div class="form-group">
         <label>Senha: *</label>
         <input type="password" v-model="password" class="form-control">
-      </div>
-      <div class="form-group">
         <label>Confirmar Senha: *</label>
         <input type="password" v-model="confirmPassword" class="form-control">
-      </div>
-      <div class="form-group">
         <label>Idade: *</label>
         <input type="text" v-model="age" class="form-control">
-      </div>
-      <div class="form-group">
         <label>Gênero: *</label>
         <select class="form-control" v-model="gender">
-          <option :key="key" :value='gen' v-for="(gen, key) in genderList">{{gen}}</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
         </select>
+        <label>Url de Imagem de Perfil: *</label>
+        <input type="text" v-model="pictureUrl" class="form-control">
       </div>
-      <button @click="send" class="btn btn-primary">Submit</button>
+      <button @click="send" class="btn btn-primary">Cadastro</button>
     </div>
   </div>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { createUserAction } from '../actions'
 export default {
   data () {
     return {
-      name: 'victor',
-      email: 'victor@email.com',
-      password: '123123',
-      age: '22',
-      confirmPassword: '123123',
-      genderList: [
-        'Male',
-        'Feminino',
-        'Outro'
-      ],
-      gender: 'Male',
+      name: '',
+      email: '',
+      password: '',
+      age: '',
+      confirmPassword: '',
+      pictureUrl: '',
+      gender: '',
       responseMessage: ''
     }
   },
   methods: {
-    ...mapActions([
-      'createUser'
-    ]),
     async send () {
-      let userToSendToAPI = {
-        name: this.name,
-        email: this.email,
-        password: this.password,
-        age: this.age,
-        gender: this.gender
-      }
-      try {
-        await this.createUser(userToSendToAPI)
-        // mostra que o usuário foi cadastrado com sucesso
-        alert('Usuário cadastrado com sucesso')
-        this.$router.push('/')
-      } catch (error) {
-        this.responseMessage = `Ocorreu um erro no cadastro: codigo - ${error.response.status}`
-        this.$refs.responseText.className = 'text-danger'
+      // Validador que verifica se a senha e a senha confirmada são iguais
+      if (this.password === this.confirmPassword) {
+        let userToSendToAPI = {
+          name: this.name,
+          email: this.email,
+          password: this.password,
+          age: this.age,
+          gender: this.gender,
+          pictureUrl: this.pictureUrl
+        }
+        try {
+          // faz a chamada da action createUser
+          await createUserAction(userToSendToAPI)
+          // mostra que o usuário foi cadastrado com sucesso
+          alert('Usuário cadastrado com sucesso')
+          this.$router.push('/')
+        } catch (error) {
+          alert(error.response.data.error.message)
+        }
+      } else {
+        alert('Você precisa confirmar sua senha!')
       }
     }
-  },
-  computed: {
-    ...mapGetters([
-      'user'
-    ])
   }
 }
 </script>
