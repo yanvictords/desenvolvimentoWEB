@@ -16,7 +16,6 @@ module.exports = {
   // CREATE USER
   createUser (req, res, next) {
     let user = new schema.UserSchema(req.body)
-    user.money = 3000
     user.save((err, user) => {
       if (err) return next(err)
 
@@ -35,6 +34,18 @@ module.exports = {
   },
   getUser (req, res, next) {
     schema.UserSchema.findById(req.params._id, (err, user) => {
+      if (err) return next(err)
+      if (!user) {
+        err = new Error('User not found')
+        err.status = 404
+        return next(err)
+      } else {
+        res.json(user)
+      }
+    })
+  },
+  getUserByEmail (req, res, next) {
+    schema.UserSchema.find({email: req.params._email}, (err, user) => {
       if (err) return next(err)
       if (!user) {
         err = new Error('User not found')

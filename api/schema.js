@@ -19,8 +19,10 @@ const UserSchema = new Schema(
 const ProdutoSchema = new Schema(
   {
     nome: String,
-    validade: { type: String, required: true },
-    valor: Number    
+    dono: String,
+    descricao: String,
+    valor: Number,
+    pictureUrl: String 
   },
   {
     timestamps: true
