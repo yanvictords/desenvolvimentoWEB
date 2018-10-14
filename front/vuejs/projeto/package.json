@@ -7,10 +7,11 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "rpg-awesome": "^0.2.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.2.5",
-    "axios": "^0.18.0"
+    "vuetify": "^1.2.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",

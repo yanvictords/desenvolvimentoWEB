@@ -1,67 +1,71 @@
 <template>
-<div class="cadastro">
+<div class="cadastro-usuario">
   <v-parallax height="auto" fluid :src="imagemSpace">
   <v-divider/>
   <v-container>
   <v-layout row wrap>
   <v-flex xs8 offset-xs2>
-  <v-card color="#FAECD0" height=600 class="card-cadastro">
+  <v-card color="#FAECD0" height="auto" class="card-cadastro-usuario">
     <v-img class="white--text" height="70px" :src="imagemMoto"/>
     <v-divider/>
     <v-divider/>
     <v-divider/>
-    <h1 class="cadastro"> Cadastrar </h1>
+  <h1 id="cadastro-usuario"> Criar Conta </h1>
   <v-form v-model="valid">
     <v-text-field error
-      prepend-icon="face"
+      prepend-icon="ra-book"
       v-model="nome"
       label="Nome"
       required
     ></v-text-field>
     <v-text-field
-      prepend-icon="email"
+      prepend-icon="ra-crown"
       v-model="email"
       label="E-mail / Usuário"
       required
     ></v-text-field>
     <v-text-field
-      prepend-icon="lock"
+      prepend-icon="ra-key"
       v-model="senha"
       label="Senha"
       type="password"
       required
     ></v-text-field>
         <v-text-field
-      prepend-icon="person"
+      prepend-icon="ra-aura"
       v-model="idade"
       label="Idade"
       required
     ></v-text-field>
       <v-text-field
-      prepend-icon="perm_identity"
+      prepend-icon="ra-double-team"
       v-model="sexo"
       label="Sexo"
       required
     ></v-text-field>
             <v-text-field
-      prepend-icon="image"
+      prepend-icon="ra-sunbeams"
       v-model="foto"
       label="Url Foto"
       required
     ></v-text-field>
-      <div class="text-xs-center">
-    <v-btn @click="cadastrar()" round color="black" font-family='Courier New' dark>Cadastrar</v-btn>
-  </div>
+    <div class="text-xs-center">
+      <v-btn @click="cadastrar()" round color="black" font-family='Courier New' dark>Cadastrar</v-btn>
+    </div>
+    <v-layout justify-center>
+      <v-flex xs2>
+        <v-progress-circular v-if="carregando" indeterminate color="black"/>
+      </v-flex>
+    </v-layout>
   </v-form>
 
   </v-card>
-    <v-alert :value="cadastroComSucesso" color="green" type="success">
+    <v-alert class="cadastro-usuario" :value="cadastroComSucesso" color="#97B143" type="success">
         Usuário cadastrado com Sucesso!
     </v-alert>
-    <v-alert :value="campoFaltando" color="red" type="error">
+    <v-alert id="cadastro-usuario" :value="campoFaltando" color="#C96040" type="error">
         Por favor, preencha todos os campos!
     </v-alert>
-    <v-progress-circular v-if="carregando" indeterminate color="primary"/>
   </v-flex>
   </v-layout>
 </v-container>
@@ -127,10 +131,12 @@ export default {
 
 <style>
 .outset {border-style: outset;}
-.card-cadastro {
+.card-cadastro-usuario {
   border-style: ridge;
+  color: rgb(27, 24, 20);
+  font-family: MedievalSharp;
 }
-.cadastro {
+#cadastro-usuario {
   color: black;
   font-family: 'Courier New', Courier, monospace;
 }

@@ -1,40 +1,43 @@
 <template>
     <div>
-    <v-navigation-drawer
+    <v-navigation-drawer class="navegador-deslogado"
     v-model="menuVisivel"
-    absolute
+    app
     temporary
     attach
     auto
+    height="auto"
     close-on-click
     dark
     top
     transition
   >
+    <v-parallax height="auto" :src="imagemFaseAgua">
+
     <v-list>
       <v-list-tile @click="inicio()">
         <v-list-tile-action>
-          <v-icon>home</v-icon>
+          <v-icon color="#e9a771">ra-castle-emblem</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Início</v-list-tile-title>
       </v-list-tile>
-
+      <v-divider></v-divider>
       <v-list-tile @click="login()">
         <v-list-tile-action>
-          <i class="material-icons">account_circle</i>
+          <v-icon color="pink">ra-hood</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Entrar</v-list-tile-title>
       </v-list-tile>
-
+      <v-divider></v-divider>
       <v-list-tile @click="cadastro()">
         <v-list-tile-action>
-          <i class="material-icons">face</i>
+          <v-icon color="#A3B8A9">ra-wooden-sign</v-icon>
         </v-list-tile-action>
-        <v-list-tile-title>Cadastrar</v-list-tile-title>
+        <v-list-tile-title>Criar Conta</v-list-tile-title>
       </v-list-tile>
-
   <MenuProdutos @fecharMenu="menuVisivel=false" :usuario-logado="false"/>
   </v-list>
+</v-parallax>
 
   </v-navigation-drawer>
   </div>
@@ -57,10 +60,7 @@ import MenuProdutos from './MenuProdutos.vue'
     },
     data () {
       return {
-        admins: [
-          ['Ver Produtos', 'store'],
-          ['Settings', 'settings']
-        ],
+        imagemFaseAgua: require('@/assets/gifs/faseAgua.gif'),
         menuVisivel: false
       }
     },
@@ -80,3 +80,12 @@ import MenuProdutos from './MenuProdutos.vue'
     }
   }
 </script>
+
+<style>
+.navegador-deslogado {
+  font-family: MedievalSharp;
+  color: #e9a771;
+}
+
+
+</style>

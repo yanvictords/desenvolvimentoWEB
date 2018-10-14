@@ -1,40 +1,42 @@
 <template>
     <div>
-    <v-navigation-drawer
+    <v-navigation-drawer class="navegador-logado"
     v-model="menuVisivel"
-    absolute
+    app
     temporary
     attach
     auto
+    height="auto"
     close-on-click
     dark
     top
     transition
   >
+    <v-parallax height="auto" :src="imagemFaseAgua">
     <v-list>
       <v-list-tile @click="inicio()">
         <v-list-tile-action>
-          <v-icon>home</v-icon>
+          <v-icon color="#e9a771">ra-castle-emblem</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Início</v-list-tile-title>
       </v-list-tile>
-
+      <v-divider></v-divider>
       <v-list-tile @click="perfil()">
         <v-list-tile-action>
-          <i class="material-icons">account_circle</i>
+          <v-icon color="#A3B8A9">ra-helmet </v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Meu Perfil</v-list-tile-title>
       </v-list-tile>
-
+      <MenuProdutos @fecharMenu="menuVisivel=false" :usuario-logado="true"/>
+      <v-divider></v-divider>
       <v-list-tile @click="sair()">
         <v-list-tile-action>
-          <i class="material-icons">exit_to_app</i>
+       <v-icon color="#AA2C10">ra-falling</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Sair</v-list-tile-title>
       </v-list-tile>
-
-      <MenuProdutos @fecharMenu="menuVisivel=false" :usuario-logado="true"/>
     </v-list>
+    </v-parallax>
   </v-navigation-drawer>
   </div>
 </template>
@@ -57,16 +59,7 @@ import BrowserService from '../../services/BrowserService';
     },
     data () {
       return {
-        admins: [
-          ['Management', 'people_outline'],
-          ['Settings', 'settings']
-        ],
-        cruds: [
-          ['Create', 'add'],
-          ['Read', 'insert_drive_file'],
-          ['Update', 'update'],
-          ['Delete', 'delete']
-        ],
+        imagemFaseAgua: require('@/assets/gifs/faseAgua.gif'),
         menuVisivel: false
       }
     },
@@ -87,3 +80,10 @@ import BrowserService from '../../services/BrowserService';
     }
   }
 </script>
+
+<style>
+.navegador-logado {
+ font-family: MedievalSharp;
+}
+
+</style>

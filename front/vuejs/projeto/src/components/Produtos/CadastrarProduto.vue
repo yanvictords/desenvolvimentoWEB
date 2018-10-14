@@ -4,33 +4,33 @@
   <v-container>
   <v-layout row justify-center>
   <v-flex xs8 offset-xs1>
-  <v-card color="#FAECD0" height=460 class="card-cadastro">
+  <v-card color="#FAECD0" height=460 class="card-cadastro-produto">
   <v-img class="white--text" height="75px" :src="imagemMoto"/>
     <v-divider/>
     <v-divider/>
     <v-divider/>
-    <h1 class="cadastro"> Cadastrar Produto </h1>
+    <h1 class="cadastro-produto"> Cadastrar Produto </h1>
   <v-form v-model="valid">
     <v-text-field error
-      prepend-icon="label"
+      prepend-icon="ra-wooden-sign"
       v-model="nome"
       label="Nome do Produto"
       required
     ></v-text-field>
     <v-text-field error
-      prepend-icon="description"
+      prepend-icon="ra-quill-ink"
       v-model="descricao"
       label="Descrição do Produto"
       required
     ></v-text-field>
     <v-text-field
-      prepend-icon="attach_money"
+      prepend-icon="ra-diamond"
       v-model="valor"
       label="Preço"
       required
     ></v-text-field>
     <v-text-field
-      prepend-icon="image"
+      prepend-icon="ra-sunbeams"
       v-model="imagem"
       label="Url Foto"
       required
@@ -40,7 +40,7 @@
   </div>
   </v-form>
   </v-card>
-  <v-alert :value="campoFaltando" color="red" type="error">
+  <v-alert class="cadastro-produto" :value="campoFaltando" color="#C96040" type="error">
         Por favor, preencha todos os campos!
   </v-alert>
   </v-flex>
@@ -52,7 +52,7 @@
     <v-card color="#FAECD0">
       <v-img height="100px" :src="imagemPost"/>
       <!-- <v-card-title class="headline grey lighten-2" primary-title> Sucesso </v-card-title> -->
-      <v-card-text class="cadastro"> O produto foi cadastrado com SUCESSO! </v-card-text>
+      <v-card-text class="cadastro-produto"> O produto foi cadastrado com SUCESSO! </v-card-text>
       <v-divider/>
       <v-card-actions>
         <v-spacer></v-spacer>
@@ -114,11 +114,17 @@ import HttpService from '../../services/HttpService'
 
 <style>
 .outset {border-style: outset;}
-.card-cadastro {
+.card-cadastro-produto {
   border-style: ridge;
+  border-color: black;
+  font-family: MedievalSharp;
 }
-.cadastro {
+.cadastro-produto {
   color: black;
   font-family: 'Courier New', Courier, monospace;
+}
+.cadastro-produto-medieval {
+  color: black;
+  font-family: MedievalSharp;
 }
 </style>
