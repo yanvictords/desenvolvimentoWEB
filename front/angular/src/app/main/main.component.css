@@ -1,9 +1,33 @@
-.center {
-  text-align: center
+.center-position {
+  position: relative;
+  margin-right: auto ;
+  margin-left: auto;
+  top: 50px;
+}
+
+.form-style {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card-color {
+  background-color: rgb(223, 186, 145)
 }
 
 .card-img-top {
   width: auto;
   height: 50px;
   object-fit: cover;
+}
+
+.btn-position {
+  margin-right: auto; 
+  margin-left: auto;
+}
+
+label {
+  font-family: MedievalSharp; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: MedievalSharp; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: MedievalSharp; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: MedievalSharp; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: MedievalSharp; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
 }
