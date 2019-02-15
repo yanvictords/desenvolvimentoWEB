@@ -5,5 +5,12 @@ nav {
 .background
 {
   background-image: url('https://i.pinimg.com/originals/6d/fb/c7/6dfbc74564ed8ed039734fa91b2d8f9a.gif');
-  height:40em; background-size:cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+.single-page {
+  position: relative;
+  margin: 0 50px;
+  display: inline
 }

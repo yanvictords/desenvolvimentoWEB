@@ -1,27 +1,31 @@
-
-<div class="card center-position card-color" style="width: 500px; height: 480px;">
+<div class="card center-position card-color" style="width: 40%; height: auto;">
     <img class="card-img-top" [src]="imagem">
-    <div class="form-style">
-        <form #mainForm="ngForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label class="medieval-style" for="exampleFormControlInput1"> Nome </label>
-                <input  [(ngModel)]="nome" name="nome" class="form-control" placeholder="Digite seu nome">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">E-mail</label>
-                <input  [(ngModel)]="email" type="email" name="email" class="form-control" placeholder="Digite um e-mail válido">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">idade</label>
-                <input  [(ngModel)]="idade" name="idade" class="form-control" placeholder="Digite a sua idade">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">CPF</label>
-                <input  [(ngModel)]="cpf" name="cpf" class="form-control" placeholder="Digite o número do seu CPF">
-            </div>
-            <div class="btn-position">
-                <button class="btn btn-primary" type="submit">Create</button>
-            </div>
-        </form>
+    <div class="medieval-font" style="text-align: center">
+        <h1> Create Account </h1>
     </div>
-  </div>
+    <form #mainForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="medieval-font" for="exampleFormControlInput1"> Nome </label>
+            <input [(ngModel)]="nome" name="nome" class="form-control medieval-font" placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+            <label class="medieval-font" for="exampleFormControlInput1">E-mail</label>
+            <input [(ngModel)]="email" type="email" name="email" class="form-control medieval-font" placeholder="Digite um e-mail válido">
+        </div>
+        <div class="form-group">
+                <label class="medieval-font" for="exampleFormControlInput1">Senha</label>
+                <input [(ngModel)]="senha" type="password" name="senha" class="form-control medieval-font" placeholder="Digite a sua senha">
+            </div>
+        <div class="form-group">
+            <label class="medieval-font" for="exampleFormControlInput1">idade</label>
+            <input  [(ngModel)]="idade" name="idade" class="form-control medieval-font" placeholder="Digite a sua idade">
+        </div>
+        <div class="form-group">
+            <label class="medieval-font" for="exampleFormControlInput1">CPF</label>
+            <input  [(ngModel)]="cpf" name="cpf" class="form-control medieval-font" placeholder="Digite o número do seu CPF">
+        </div>
+        <div class="btn-position">
+            <button class="btn btn-primary medieval-font" style="background-color: black; width: auto;" type="submit">Create</button>
+        </div>
+    </form>
+</div>
