@@ -5,16 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { EditComponent } from './edit/edit.component';
-import { CreateComponent } from './create/create.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    EditComponent,
-    CreateComponent
+    CadastroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

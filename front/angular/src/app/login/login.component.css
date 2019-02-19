@@ -1,0 +1,24 @@
+.center-position {
+    margin: 130px auto;
+    padding: 10px 10px;
+}
+
+.card-color {
+    background-color: rgb(223, 186, 145)
+}
+
+.card-img-top {
+    height: 50px;
+    object-fit: cover;
+    margin: auto auto;
+}
+
+.medieval-font {
+    position: relative;
+    font-family: MedievalSharp; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: MedievalSharp; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: MedievalSharp; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: MedievalSharp; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: MedievalSharp; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+
+.btn-position {
+    position: relative;
+    text-align: right;
+}

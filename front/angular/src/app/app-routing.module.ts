@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main/main.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { LoginComponent } from './login/login.component'
 
 const routes: Routes = [{
-  path: 'main',
-  component: MainComponent
+  path: 'cadastro',
+  component: CadastroComponent
+},
+{
+  path: 'login',
+  component: LoginComponent
 }];
 
 @NgModule({
