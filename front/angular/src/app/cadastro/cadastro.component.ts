@@ -14,12 +14,15 @@ export class CadastroComponent implements OnInit {
   cpf: string = ''
   idade: number = null
 
-  constructor() { }
+  constructor() { 
 
-  ngOnInit() {
   }
 
-  onSubmit(){
+  ngOnInit(): void {
+
+  }
+
+  onSubmit(): void {
     console.log('nome', this.nome)
     console.log('email', this.email)
     console.log('senha', this.senha)

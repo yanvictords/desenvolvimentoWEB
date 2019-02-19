@@ -12,10 +12,11 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    
   }
 
-  onSubmit(){
+  onSubmit(): void {
     console.log(this.email)
     console.log(this.senha)
   }

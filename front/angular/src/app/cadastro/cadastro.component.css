@@ -2,6 +2,8 @@
   position: relative;
   margin: 0 auto;
   padding: 30px;
+  user-select: none;
+  cursor: default;
 }
 
 .card-color {
@@ -11,12 +13,10 @@
 .card-img-top {
   height: 50px;
   object-fit: cover;
-  margin: auto 50px 10px 0;
+  margin: auto 0px 10px 0;
 }
 
 .btn-position {
-  position: relative;
-  margin: 0 auto;
   text-align: right;
 }
 

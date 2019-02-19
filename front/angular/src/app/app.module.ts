@@ -7,12 +7,16 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
+import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
+import { InicialComponent } from './inicial/inicial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroProdutoComponent,
+    InicialComponent
   ],
   imports: [
     BrowserModule,

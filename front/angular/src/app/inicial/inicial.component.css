@@ -1,0 +1,29 @@
+.container {
+    margin: 10% auto;
+    user-select: none;
+    cursor: default;
+}
+
+.posix {
+    margin: auto auto;
+    text-align: center;
+}
+
+.logo-background {
+    width: 300px;
+    padding-bottom: 1px;
+    background-color: rgb(6, 3, 15);
+    font-variant: small-caps;
+    color: rgb(233, 167, 113);
+    opacity: 0.6;
+}
+
+.logo-baixo {
+    width: 600px;
+    padding-bottom: 1px;
+    background-color: rgb(6, 3, 15);
+    font-style: normal;
+    color: rgb(233, 167, 113);
+    font-variant: small-caps;
+    opacity: 0.3;
+  }

@@ -4,13 +4,19 @@ nav {
 
 .background
 {
-  background-image: url('https://i.pinimg.com/originals/6d/fb/c7/6dfbc74564ed8ed039734fa91b2d8f9a.gif');
-  position: relative;
+  background-image: url('https://media.giphy.com/media/pVGsAWjzvXcZW4ZBTE/giphy.gif');
   margin: 0 auto;
+  background-size: 100%
 }
 
 .single-page {
-  position: relative;
-  margin: 0 50px;
-  display: inline
+  padding: 60px;
+  min-height: 520px;
+}
+
+.footer {
+  background-color: black;
+  border-top-style: solid;
+  height: 50px;
+  font-family: MedievalSharp;
 }
