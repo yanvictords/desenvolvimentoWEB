@@ -11,7 +11,8 @@ export class CadastroComponent implements OnInit {
   nome: string = ''
   email: string = ''
   senha: string = ''
-  cpf: string = ''
+  sexo: string;
+  cpf: number = null
   idade: number = null
 
   constructor() { 
@@ -27,6 +28,7 @@ export class CadastroComponent implements OnInit {
     console.log('email', this.email)
     console.log('senha', this.senha)
     console.log('cpf', this.cpf)
+    console.log('sexo', this.sexo)
     console.log('idade', this.idade)
   }
 }

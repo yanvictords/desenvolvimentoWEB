@@ -5,6 +5,7 @@ nav {
 .nav-a {
   color: orange;
   font-family: MedievalSharp;
+  user-select: none;
 }
 
 footer {

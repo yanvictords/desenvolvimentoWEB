@@ -18,11 +18,26 @@
             </div>
         <div class="form-group">
             <label class="medieval-font" for="exampleFormControlInput1">idade</label>
-            <input  [(ngModel)]="idade" name="idade" class="form-control medieval-font" placeholder="Digite a sua idade">
+            <input type="number" [(ngModel)]="idade" name="idade" class="form-control medieval-font" placeholder="Digite a sua idade">
         </div>
         <div class="form-group">
             <label class="medieval-font" for="exampleFormControlInput1">CPF</label>
-            <input  [(ngModel)]="cpf" name="cpf" class="form-control medieval-font" placeholder="Digite o número do seu CPF">
+            <input type="number" [(ngModel)]="cpf" name="cpf" class="form-control medieval-font" placeholder="Digite o número do seu CPF">
+        </div>
+        <div class="form-group">
+            <label class="medieval-font" for="exampleFormControlInput1">Sexo</label> 
+            <br/>
+            <div style="margin-left: 20px;">
+                <label class="medieval-font">
+                <input type="radio" name="formRadio" class="form-check-input" [(ngModel)]="sexo" value="Masculino">
+                    Masculino
+                </label>
+                <br/>
+                <label class="medieval-font">
+                    <input type="radio" name="formRadio" class="form-check-input" [(ngModel)]="sexo" value="Feminino">
+                    Feminino
+                </label>
+            </div>
         </div>
         <div class="btn-position">
             <button class="btn btn-primary medieval-font" style="background-color: black; width: auto;" type="submit">Cadastrar</button>

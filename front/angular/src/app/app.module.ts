@@ -9,6 +9,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { InicialComponent } from './inicial/inicial.component';
+import { MenuComponent } from './menu/menu.component';
+import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { InicialComponent } from './inicial/inicial.component';
     CadastroComponent,
     LoginComponent,
     CadastroProdutoComponent,
-    InicialComponent
+    InicialComponent,
+    MenuComponent,
+    ListaProdutosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+.container {
+    position: relative;
+    width: auto;
+    border-style: solid;
+    border-color: black;
+}
+
+.produto {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+}
+
+.produto:hover {
+    transform: rotateX(45deg)
+}

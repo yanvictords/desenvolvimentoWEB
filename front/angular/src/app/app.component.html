@@ -1,11 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <nav class="navbar navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button (click)="mostrarMenu()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand nav-a" href="#">Seja bem-vindo!</a>
 </nav>
+<app-menu *ngIf="menuVisivel"></app-menu>
 <router-outlet></router-outlet>
 <footer>
   <h6 style="text-align: center; padding-top: 15px; color: green;"> @App feito por: yanvictords </h6>

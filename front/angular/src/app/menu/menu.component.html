@@ -1,0 +1,12 @@
+<div class="container">
+  <nav>
+    <ul>
+      <li> <a href="#"> Home </a> </li>
+      <li *ngIf="!usuarioLogado"> <a href="login"> Entrar </a></li>
+      <li *ngIf="!usuarioLogado"> <a href="cadastro"> Cadastrar </a> </li>
+      <li *ngIf="usuarioLogado"> <a href="cadastro-produto"> Novo produto </a></li>
+      <li><a href="lista-produtos"> Ver Produtos </a></li>
+      <li (click)="onSairClick()" *ngIf="usuarioLogado"> <a href="#"> Sair </a></li>
+    </ul>
+  </nav>
+</div>

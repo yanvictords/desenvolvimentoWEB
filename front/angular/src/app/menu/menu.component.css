@@ -1,0 +1,26 @@
+div {
+    position: absolute;
+    width: 160px;
+    background-color: black;
+    padding: 10px;
+    border-style: inset;
+    border-color: darkblue;
+    border-width: 2px;  
+    text-align: right;
+}
+
+ul {
+    text-decoration: underline;
+}
+
+li {
+    /* border-bottom-style: solid;
+    border-bottom-color: beige;
+    border-bottom-width: 1px;  */
+    display: block;
+}
+
+a {
+    color: orange;
+    font-family: MedievalSharp;
+}

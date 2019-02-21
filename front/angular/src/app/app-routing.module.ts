@@ -4,6 +4,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component'
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { InicialComponent } from './inicial/inicial.component';
+import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
 
 const routes: Routes = [
 {
@@ -13,6 +14,10 @@ const routes: Routes = [
 {
   path: 'login',
   component: LoginComponent
+},
+{
+  path: 'lista-produtos',
+  component: ListaProdutosComponent
 },
 {
   path: 'cadastro-produto',
