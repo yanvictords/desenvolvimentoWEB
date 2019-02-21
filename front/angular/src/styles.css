@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('https://media.giphy.com/media/pVGsAWjzvXcZW4ZBTE/giphy.gif');
+    background-size: 100%;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 50px;
+}

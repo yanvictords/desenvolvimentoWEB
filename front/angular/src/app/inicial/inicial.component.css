@@ -1,5 +1,9 @@
 .container {
-    margin: 10% auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 15%;
+    width: auto;
     user-select: none;
     cursor: default;
 }

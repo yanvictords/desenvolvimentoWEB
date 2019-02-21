@@ -2,19 +2,10 @@ nav {
     color: black
 }
 
-.background
-{
-  background-image: url('https://media.giphy.com/media/pVGsAWjzvXcZW4ZBTE/giphy.gif');
-  margin: 0 auto;
-  background-size: 100%
-}
-
-.single-page {
-  padding: 60px;
-  min-height: 520px;
-}
-
-.footer {
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: black;
   border-top-style: solid;
   height: 50px;

@@ -1,7 +1,6 @@
 .center-position {
     position: relative;
-    margin: 30px auto;
-    padding: 10px;
+    margin: 20px auto;
     user-select: none;
     cursor: default;
 }
