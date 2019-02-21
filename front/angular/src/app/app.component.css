@@ -2,6 +2,11 @@ nav {
     color: black
 }
 
+.nav-a {
+  color: orange;
+  font-family: MedievalSharp;
+}
+
 footer {
   position: absolute;
   bottom: 0;
