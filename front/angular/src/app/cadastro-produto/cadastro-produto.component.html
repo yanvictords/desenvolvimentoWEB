@@ -6,16 +6,30 @@
     <div class="card-body">
         <form #idCadastroProduto="ngForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
-                <label class="medieval-font" for="nome-produto">Nome</label>
+                <label class="medieval-font" for="nome-produto">Nome do jogo</label>
                 <input [(ngModel)]="nomeProduto" class="form-control medieval-font" name="nome-produto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o nome do produto">
             </div>
             <div class="form-group">
-                <label class="medieval-font" for="nome-produto">Descrição do Produto</label>
-                <input [(ngModel)]="descricaoProduto" class="form-control medieval-font" name="nome-produto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite uma descrição para o produto">
+                <label class="medieval-font" for="nome-produto">Preço (R$)</label>
+                <input type="number" [(ngModel)]="preco" class="form-control medieval-font" name="nome-produto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o valor do produto">
             </div>
             <div class="form-group">
-                <label class="medieval-font" for="nome-produto">Preço (R$)</label>
-                <input [(ngModel)]="preco" class="form-control medieval-font" name="nome-produto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o valor do produto">
+                <label class="medieval-font" for="nome-produto">Plataforma</label> <br/>
+                <select class="combo-categoria-plataforma" [(ngModel)]="plataforma" name="comboPlataforma" id="category">
+                    <option value="" disabled selected>Selecione a plataforma</option>
+                    <option *ngFor="let item of plataformas" [value]="item">{{ item }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="medieval-font" for="nome-produto">Categoria</label> <br/>
+                <select class="combo-categoria-plataforma" [(ngModel)]="categoria" name="comboCategoria" id="category">
+                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option *ngFor="let item of categorias" [value]="item">{{ item }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="medieval-font" for="nome-produto">Imagem (Link)</label>
+                <input [(ngModel)]="fotoCapa" class="form-control medieval-font" name="foto-produto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="INsira a Url da foto de capa">
             </div>
             <div class="btn-position">      
                 <button type="submit" class="btn btn-primary medieval-font" style="background-color: black">Cadastrar</button>

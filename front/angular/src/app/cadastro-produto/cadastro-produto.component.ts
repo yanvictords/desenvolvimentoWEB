@@ -6,11 +6,20 @@ import { OnInit, Component } from '@angular/core';
     styleUrls: ['./cadastro-produto.component.css']
   })
 export class CadastroProdutoComponent implements OnInit {
-    nomeProduto: string = ''
-    descricaoProduto: string = ''
-    preco: string = ''
-    dataCriacao: Date = null
-    
+    usuario: string
+    nomeProduto: string
+    preco: number 
+    dataCriacao: Date
+    plataforma: string
+    categoria: string
+    fotoCapa: string
+    plataformas = [
+        'Playstation 4', 'Nintendo Wii', 'Xbox', 'PC'
+    ]
+    categorias = [
+        'Ação', 'Aventura', 'Esporte', 'Estratégia', 'RPG', 'Terror', 'Outros'
+    ]
+
     constructor () {
 
     }
@@ -21,9 +30,10 @@ export class CadastroProdutoComponent implements OnInit {
 
     onSubmit(): void {
         console.log(this.nomeProduto)
-        console.log(this.descricaoProduto)
         console.log(this.preco)
         this.dataCriacao = new Date()
         console.log(this.dataCriacao)
+        console.log(this.plataforma)
+        console.log(this.categoria)
     }
 }

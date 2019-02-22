@@ -1,13 +1,17 @@
 <div class="container"> 
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
-  <div class="produto"></div>
+  <div>
+    <div class="header blue"></div>
+    <div class="header green"></div>
+    <div class="header red"></div>
+  </div>
+  <div *ngFor="let item of jogos" class="produto">
+      <img [src]="item.fotoCapa" class="card-img-top" alt="...">
+      <br/> <small class="card-title">{{ item.usuario }}</small>
+      <div style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: black; margin-bottom: 10px;"> </div>
+      <h5 class="card-title">{{ item.nomeProduto }}</h5>
+      <p class="card-text"> Plataforma: {{ item.plataforma }}</p>
+      <p class="card-text"> Categoria: {{ item.categoria }}</p>
+      <p class="card-text"> Valor: {{ item.preco }} R$ </p>
+      <button style="background-color: black; color: orange;"> Comprar </button>
+  </div>
 </div>

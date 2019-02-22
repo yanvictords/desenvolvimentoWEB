@@ -1,16 +1,16 @@
 div {
     position: absolute;
     width: 160px;
-    background-color: black;
+    background-color: rgb(223, 186, 145);
     padding: 10px;
-    border-style: inset;
-    border-color: darkblue;
-    border-width: 2px;  
+    border-style: double;
+    border-color: gray;
+    border-width: 5px;  
     text-align: right;
+    z-index: 10;
 }
 
 ul {
-    text-decoration: underline;
 }
 
 li {
@@ -21,6 +21,6 @@ li {
 }
 
 a {
-    color: orange;
+    color:black;
     font-family: MedievalSharp;
 }

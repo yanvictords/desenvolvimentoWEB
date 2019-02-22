@@ -5,6 +5,10 @@
     cursor: default;
 }
 
+.combo-categoria-plataforma {
+    font-family: MedievalSharp;
+}
+
 .card-color {
     background-color: rgb(223, 186, 145)
 }
